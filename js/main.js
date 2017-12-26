@@ -1,6 +1,9 @@
 let grid = [];
 let gameInPlay = false;
 
+// bug: win one color wins stop the other color from winning right after
+
+
 window.restart = () => {
   grid = [
     [{},{},{},{},{},{},{}],
