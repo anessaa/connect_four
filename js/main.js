@@ -50,22 +50,21 @@ window.clickSquare = (x, y) => {
 }
 
 function calculatewinners() {
-  console.log("is there a winner");
-  // find verticals
   for (var i = 0; i < grid.length; i++) {
     var row = grid[i];
     for (var j = 0; j < row.length; j++) {
       var square = grid[i][j];
       if (square && square.color) {
+
         if (i === 0 || i === 1) {
           if (grid[i + 1][j].color === square.color && 
             grid[i + 2][j].color === square.color && 
             grid[i + 3][j].color === square.color) {
             colorWins(square.color);
             return;
-            
             }
           }
+
           if (j === 0 || j === 1 || j === 2 || j === 3) {
             if (grid[i][j + 1].color === square.color  &&
               grid[i][j + 2].color === square.color &&
@@ -73,7 +72,7 @@ function calculatewinners() {
               colorWins(square.color);                
               return;
               }
-            }
+          }
 
           if (i === 0 || i === 1) {
             if (j === 0 || j === 1 || j === 2 || j === 3) {
@@ -94,15 +93,13 @@ function calculatewinners() {
                   }
             }
           }
-          }
         }
-        
-      }
-    
-    function colorWins(color) {
-      document.getElementById("whoWon").innerHTML = `${color} wins!`;
-    }
-    
+      }        
   }
+    
+  function colorWins(color) {
+    document.getElementById("whoWon").innerHTML = `${color} wins!`; 
+  }    
+}
 
 restart();
