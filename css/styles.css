@@ -1,7 +1,22 @@
+body {
+  background: lightcyan;
+}
+
 svg {
-  width: 1000px;
-  height: 1000px;
-  position: absolute;
-  left: 50px;
+  width: 500px;
+  height: 500px;
+  position: relative;
   top: 50px;
+}
+
+#grid {
+  display: inline-block;
+}
+
+h2 {
+  margin-left: 17px;
+}
+
+.board {
+  text-align: center;
 }
